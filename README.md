@@ -1,2 +1,6 @@
 # Operating_Systems
-My notes and sample code for operating system learning.
+This repo contains the notes and sample code that i will have during my way to learning operating systems.
+
+Resources:
+---------
+http://pages.cs.wisc.edu/~remzi/OSTEP/ 
