@@ -1,0 +1,41 @@
+Virtualization:
+===========
+In order to cater many requests. Operating systems virtualises the resources that I has.
+	• CPU virtualization
+		○ Emulates CPU such that at same time, multiple processes are getting executed.
+	• Memory virtualization
+		○ Emulates RAM to cater so many applications. 
+		e.g: when you call malloc() the adress you get is not real adress on RAM.
+	• Disk virtualization
+	• concurrency.
+		○ OS has to have some scheduling mechanisms to allow different process/threads run at same time.
+	• persistency.
+		○ Journaling, copy-on-write
+
+Desing Goals:
+==========
+	• Abstraction:
+		C program hides assembly
+		assembly hides logic gates
+		logic gates hides transistors
+	Abstraction is very important. we have abstract as much as possible to not worry about underlying modules.
+	• Performance
+	• Proces-Isolation :: protection
+	• Energy efficiency
+	• security
+	• mobility
+
+
+User mode- kernel mode
+====================
+There are two modes in which a process executes on CPU.
+User mode: User mode has less privileges. e.g: normal user we create using useradd in linux.
+Kernel mode: Kernel mode has all privileges. e.g root user in linux
+
+How user mode applications can access resources that they don’t have access to?
+	-> Operating systems has specific APIs or functions that can be called by user level program to do tasks that operating system normally does.
+	
+	trap                        -> OS sends a hardware instruction telling that privilege level must shift to kernel
+	return-from-trap -> hardware instruction for changing from kernel level to user level.
+	trap-handler         -> the list/table that OS maintains.
+
